@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Some Circle Properties</title>
+        <style>
+            input {
+                font-size: 2em;
+                margin: 10px 1px 0;
+            }
+            hi {
+                color: #030357;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Some Properties Of a Circle</h1>
+
+        <label for="radius">Enter a radius, we will fetch the circle properties:</label><br><br>
+        <input class="numberInput" type="text" placeholder="Type here">
+        <p></p>
+
+        <script>
+            const input = document.querySelector(".numberInput")
+            const para = document.querySelector("p")
+
+            function area(num) {
+                return 3.142 * num * num;
+            }
+            function perimeter(num) {
+                return 2 * 3.142 * num;
+            }
+            function diameter(num) {
+                return 2 * num;
+            }
+
+            input.addEventListener("change", () => {
+                const num = parseFloat(input.value);
+                if (isNaN(num)) {
+                    para.textContent = "Please enter a valid number"
+                } else {
+                    para.textContent = `Area of the circle with radius=${num} is ${area(num)}`;
+                    para.textcontent += `Circumference of the circle with radius=${num} is ${perimeter(num)}`;
+                    para.textcontent += `Diameter of the circle with radius=${num} is ${diameter(num)}`;
+                }
+            }
+            )
+
+
+        </script>
+    </body>
+
+</html>

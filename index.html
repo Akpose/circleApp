@@ -38,7 +38,7 @@
             input.addEventListener("change", () => {
                 const num = parseFloat(input.value);
                 if (isNaN(num)) {
-                    para.textContent = "Please enter a valid number"
+                    para.textContent = "Please enter a Valid number"
                 } else {
                     para.textContent = `The circle with radius=${num} have an area of ${area(num)},
                                     a circumference of ${perimeter(num)}, and a diameter of ${diameter(num)}`;
